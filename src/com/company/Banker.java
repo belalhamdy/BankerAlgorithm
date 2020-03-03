@@ -135,7 +135,7 @@ public class Banker {
 
         for (int i = 0; i <= nResource; ++i) {
             if (i == nResource) {
-                canBeHandled = true; // satisfied all need
+                canBeHandled = true; // satisfied all needs / available
                 break;
             }
 
