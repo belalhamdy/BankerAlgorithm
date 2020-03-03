@@ -34,8 +34,6 @@ public class Banker {
 
         finished = new boolean[nProcess];
         sequence = new int[nProcess];
-
-        fillNeedArray();
     }
 
     private void makeCopy() {
@@ -96,6 +94,8 @@ public class Banker {
     }
 
     public int[] getSafeSequence() {
+        fillNeedArray();
+
         int c = 0, nFinished = 0;
         boolean flag = true;
         while (nFinished < nProcess && flag) {
@@ -128,9 +128,9 @@ public class Banker {
     // to handle a request:
     // 1- request of process <= need of process
     // 2- request of process <= available
-    public boolean request(int processId, int[] request) throws Exception {
+    // returns a new sequence
+    public int[] request(int processId, int[] request) throws Exception {
         if (processId > nProcess || processId < 0) throw new Exception("Error: Process ID out of boundary.");
-        if (sequence == null) throw new Exception("Error: No valid sequence has been discovered yet.");
 
         boolean canBeHandled = false;
 
@@ -163,7 +163,8 @@ public class Banker {
             }
         }
 
-        return canBeHandled;
+
+        return canBeHandled ? getSafeSequence() : null;
 
     }
 
