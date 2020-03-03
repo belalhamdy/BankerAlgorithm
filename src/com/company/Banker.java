@@ -48,7 +48,7 @@ public class Banker {
 
         if (this.available.length == 0 || this.allocation.length == 0)
             throw new Exception("Error: Arrays cannot be empty.");
-        if (this.available.length != this.allocation.length)
+        if (this.available.length != this.allocation[0].length)
             throw new Exception("Error: Allocation array doesn't equal to other arrays.");
 
         int alloc, max;
