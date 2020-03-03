@@ -163,8 +163,10 @@ public class Banker {
             }
         }
 
+        int[] ret = null;
+        if (canBeHandled) ret = getSafeSequence();
 
-        return canBeHandled ? getSafeSequence() : null;
+        return ret;
 
     }
 
