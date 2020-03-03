@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0ae2d0dc-6e9d-4ed8-92d5-c325518742b0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/Banker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/Logger.java" afterDir="false" />
+    <list default="true" id="0ae2d0dc-6e9d-4ed8-92d5-c325518742b0" name="Default Changelist" comment="Added Banker Algorithm and Logger Class but not tested yet.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Logger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Logger.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,18 +53,38 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1583209774215</updated>
-      <workItem from="1583209777030" duration="5616000" />
+      <workItem from="1583209777030" duration="6529000" />
     </task>
+    <task id="LOCAL-00001" summary="Added Banker Algorithm and Logger Class but not tested yet.">
+      <created>1583249606071</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1583249606071</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added Banker Algorithm and Logger Class but not tested yet." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Banker Algorithm and Logger Class but not tested yet." />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="72" key="#Inspections" timestamp="1583249515576">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="72" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1583249515576" />
+    <state x="393" y="8" key="CommitChangelistDialog2" timestamp="1583249630206">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="393" y="8" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1583249630206" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1583249608424">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1583249608424" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1583248827278">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -25,6 +25,8 @@ public class Logger {
     }
     public static void insertLog(String message){
         log.add(message);
+
         printWriter.append(message).append("\n");
+        printWriter.flush();
     }
 }
