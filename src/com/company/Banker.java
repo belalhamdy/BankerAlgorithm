@@ -16,6 +16,9 @@ public class Banker {
     int[] copyAvailable; //(available resources)
     int[][] copyMaximum, copyAllocation; //(maximum demand)/(allocated resources),(need) for each process
 
+    boolean[] copyFinished;
+    int[] copySequence; // will carry a valid sequence
+
 
     Banker(int[] available, int[][] allocation, int[][] maximum) throws Exception {
         this.available = available;
@@ -40,6 +43,16 @@ public class Banker {
         copyAllocation = Arrays.copyOf(allocation, allocation.length);
         copyAvailable = Arrays.copyOf(available, available.length);
         copyMaximum = Arrays.copyOf(maximum, maximum.length);
+        copyFinished = Arrays.copyOf(finished, finished.length);
+        copySequence = Arrays.copyOf(sequence, sequence.length);
+    }
+
+    private void retrieveCopy() {
+        allocation = copyAllocation;
+        available = copyAvailable;
+        maximum = copyMaximum;
+        finished = copyFinished;
+        sequence = copySequence;
     }
 
     private void checkArrays() throws Exception {
@@ -85,13 +98,6 @@ public class Banker {
         return "";
     }
 
-    public void resetData() {
-        allocation = copyAllocation;
-        available = copyAvailable;
-        maximum = copyMaximum;
-
-        init();
-    }
 
     public int[] getSafeSequence() {
         fillNeedArray();
@@ -164,7 +170,11 @@ public class Banker {
         }
 
         int[] ret = null;
-        if (canBeHandled) ret = getSafeSequence();
+        if (canBeHandled) {
+            makeCopy(); // save old state
+            ret = getSafeSequence();
+            if (ret == null) retrieveCopy(); // retrieve the old state
+        }
 
         return ret;
 
