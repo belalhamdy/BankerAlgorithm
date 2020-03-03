@@ -130,6 +130,7 @@ public class Banker {
     // 2- request of process <= available
     public boolean request(int processId, int[] request) throws Exception {
         if (processId > nProcess || processId < 0) throw new Exception("Error: process ID out of boundary.");
+        if (sequence == null) throw new Exception("Error: No valid sequence has been discovered yet.");
 
         boolean canBeHandled = false;
 
