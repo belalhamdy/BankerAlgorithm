@@ -48,7 +48,8 @@ public class Banker {
     }
 
     private void retrieveCopy() {
-        allocation = Arrays.copyOf(copyAllocation, copyAllocation.length);;
+        allocation = Arrays.copyOf(copyAllocation, copyAllocation.length);
+        ;
         available = Arrays.copyOf(copyAvailable, copyAvailable.length);
         maximum = Arrays.copyOf(copyMaximum, copyMaximum.length);
         finished = Arrays.copyOf(copyFinished, copyFinished.length);
@@ -104,6 +105,8 @@ public class Banker {
 
         int c = 0, nFinished = 0;
         boolean flag = true;
+
+        int[] workArray = Arrays.copyOf(available, available.length);
         while (nFinished < nProcess && flag) {
             flag = false;
             for (int i = 0; i < nProcess; ++i) {
@@ -117,9 +120,9 @@ public class Banker {
 
                             //update available
                             for (int k = 0; k < nResource; ++k) {
-                                available[k] += allocation[i][j];
+                                workArray[k] += allocation[i][j];
                             }
-                        } else if (need[i][j] > available[j]) // cannot satisfy this resource
+                        } else if (need[i][j] > workArray[j]) // cannot satisfy this resource
                             break;
                     }
                 }
@@ -155,7 +158,9 @@ public class Banker {
             if (currentRequest > need[processId][i] || currentRequest > available[i]) break;
         }
 
+        int[] ret = null;
         if (canBeHandled) {
+            makeCopy(); // save old state
             for (int i = 0; i < nResource; ++i) {
                 int currentRequest; // for out of index handling
                 try {
@@ -167,13 +172,9 @@ public class Banker {
                 allocation[processId][i] += currentRequest;
                 need[processId][i] -= currentRequest;
             }
-        }
 
-        int[] ret = null;
-        if (canBeHandled) {
-            makeCopy(); // save old state
             ret = getSafeSequence();
-            if (ret == null) retrieveCopy(); // retrieve the old state
+            if (ret == null) retrieveCopy(); // retrieve the old state, if success save it
         }
 
         return ret;
