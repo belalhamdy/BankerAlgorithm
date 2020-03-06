@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0ae2d0dc-6e9d-4ed8-92d5-c325518742b0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Banker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Banker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Utilities.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +58,7 @@
       <option name="presentableId" value="Default" />
       <updated>1583209774215</updated>
       <workItem from="1583209777030" duration="9556000" />
-      <workItem from="1583526822319" duration="5048000" />
+      <workItem from="1583526822319" duration="5300000" />
     </task>
     <task id="LOCAL-00001" summary="Added Banker Algorithm and Logger Class but not tested yet.">
       <created>1583249606071</created>
@@ -167,7 +165,21 @@
       <option name="project" value="LOCAL" />
       <updated>1583531485199</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="fixed cloning issue">
+      <created>1583531887908</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1583531887908</updated>
+    </task>
+    <task id="LOCAL-00017" summary="fixed cloning issue">
+      <created>1583531914423</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1583531914423</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,30 +206,30 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="72" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1583249515576" />
-    <state x="393" y="8" key="CommitChangelistDialog2" timestamp="1583531886855">
+    <state x="393" y="8" key="CommitChangelistDialog2" timestamp="1583531913285">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="393" y="8" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1583531886855" />
+    <state x="393" y="8" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1583531913285" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1583527818458">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1583527818458" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1583531826050">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1583532130858">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583531826050" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1583531826050">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583532130858" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1583532130857">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583531826050" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1583531826050">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583532130857" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1583532130857">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583531826050" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1583531826050">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583532130857" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1583532130858">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583531826050" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583532130858" />
     <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1583529611754">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -234,10 +246,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1583529611753" />
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1583531890033">
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1583531915683">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1583531890033" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1583531915683" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1583528038696">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -248,12 +260,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/Banker.java</url>
-          <line>150</line>
+          <line>141</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/Banker.java</url>
-          <line>146</line>
+          <line>137</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>

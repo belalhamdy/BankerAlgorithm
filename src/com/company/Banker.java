@@ -6,17 +6,17 @@ import java.util.Arrays;
 public class Banker {
     static int bankerId = 1;
 
-    int nProcess, nResource;
-    int[] available; //(available resources)
-    int[][] maximum, allocation, need; //(maximum demand)/(allocated resources),(need) for each process
+    private int nProcess, nResource;
+    private int[] available; //(available resources)
+    private int[][] maximum, allocation, need; //(maximum demand)/(allocated resources),(need) for each process
 
-    int[] sequence; // will carry a valid sequence
+    private int[] sequence; // will carry a valid sequence
 
-    int[] copyAvailable; //(available resources)
-    int[][] copyMaximum, copyAllocation; //(maximum demand)/(allocated resources),(need) for each process
+    private int[] copyAvailable; //(available resources)
+    private int[][] copyMaximum, copyAllocation; //(maximum demand)/(allocated resources),(need) for each process
 
-    boolean[] copyFinished;
-    int[] copySequence; // will carry a valid sequence
+    private boolean[] copyFinished;
+    private int[] copySequence; // will carry a valid sequence
 
 
     Banker(int[] available, int[][] allocation, int[][] maximum) throws Exception {
