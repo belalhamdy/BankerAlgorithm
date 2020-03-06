@@ -30,9 +30,7 @@ public class Banker {
         checkArrays();
         init();
     }
-    Banker(int[][] allocation,int[][] maximum) throws Exception {
-        this(null,allocation,maximum);
-    }
+
     private void init() {
         nProcess = maximum.length;
         nResource = available.length;
@@ -58,12 +56,12 @@ public class Banker {
     }
 
     private void checkArrays() throws Exception {
-        if (allocation == null || maximum == null)
+        if (available == null || allocation == null || maximum == null)
             throw new Exception("Error: Array/s Cannot be null.");
 
-        if ((this.available != null && this.available.length == 0) || this.allocation.length == 0)
+        if (this.available.length == 0 || this.allocation.length == 0)
             throw new Exception("Error: Arrays cannot be empty.");
-        if (this.available != null && this.available.length != this.allocation[0].length)
+        if (this.available.length != this.allocation[0].length)
             throw new Exception("Error: Allocation array doesn't equal to other arrays.");
 
         int alloc, max;
@@ -87,16 +85,7 @@ public class Banker {
             for (int j = 0; j < nResource; ++j)
                 need[i][j] = maximum[i][j] - allocation[i][j];
     }
-    private void fillAvailableArray(){ // loops by column
-        available = new int[nResource];
-        Arrays.fill(available,0);
 
-        for(int i = 0 ; i< nResource ; ++i){
-            for(int j = 0 ; j<nProcess ; ++j){
-                available[i] += allocation[i][j];
-            }
-        }
-    }
     private void logMessage(String message, boolean insertDataStructures) {
         // TODO: go to every part of code and place a log message
         String identifierMessage = "Banker Simulation (" + bankerId + ")";
@@ -112,7 +101,6 @@ public class Banker {
 
     public int[] getSafeSequence() {
         fillNeedArray();
-        if (available == null) fillAvailableArray();
 
         int c = 0, nFinished = 0;
         boolean flag = true;
