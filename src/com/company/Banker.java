@@ -37,19 +37,10 @@ public class Banker {
     }
 
     private void makeCopy() {
-        System.out.println("look");
-        for(int[] ints : allocation) System.out.println(Arrays.toString(ints));
-
         copyAllocation = Utilities.makeCopy(allocation);
         copyMaximum = Utilities.makeCopy(maximum);
         copySequence = Utilities.makeCopy(sequence);
         copyAvailable = Utilities.makeCopy(available);
-
-        allocation[0][0] = 9999;
-        System.out.println("look");
-        for(int[] ints : allocation) System.out.println(Arrays.toString(ints));
-        System.out.println("look");
-        for(int[] ints : copyAllocation) System.out.println(Arrays.toString(ints));
     }
 
     private void retrieveCopy() {
