@@ -48,11 +48,11 @@ public class Banker {
     }
 
     private void retrieveCopy() {
-        allocation = copyAllocation;
-        available = copyAvailable;
-        maximum = copyMaximum;
-        finished = copyFinished;
-        sequence = copySequence;
+        allocation = Arrays.copyOf(copyAllocation, copyAllocation.length);;
+        available = Arrays.copyOf(copyAvailable, copyAvailable.length);
+        maximum = Arrays.copyOf(copyMaximum, copyMaximum.length);
+        finished = Arrays.copyOf(copyFinished, copyFinished.length);
+        sequence = Arrays.copyOf(copySequence, copySequence.length);
     }
 
     private void checkArrays() throws Exception {
