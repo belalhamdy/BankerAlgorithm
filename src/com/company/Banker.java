@@ -82,9 +82,13 @@ public class Banker {
     }
 
     private void fillNeedArray() {
-        for (int i = 0; i < nProcess; ++i)
-            for (int j = 0; j < nResource; ++j)
+        need = new int[nProcess][nResource];
+
+        for (int i = 0; i < nProcess; ++i) {
+            for (int j = 0; j < nResource; ++j) {
                 need[i][j] = maximum[i][j] - allocation[i][j];
+            }
+        }
     }
 
     private void logMessage(String message, boolean insertDataStructures) {
@@ -117,10 +121,12 @@ public class Banker {
                         if (j == nResource) { // satisfied all resources
                             sequence[c++] = i;
                             flag = true;
+                            ++nFinished;
+                            finished[i] = true;
 
                             //update available
                             for (int k = 0; k < nResource; ++k) {
-                                workArray[k] += allocation[i][j];
+                                workArray[k] += allocation[i][k];
                             }
                         } else if (need[i][j] > workArray[j]) // cannot satisfy this resource
                             break;
@@ -128,7 +134,6 @@ public class Banker {
                 }
             }
         }
-
         if (nFinished != nProcess) sequence = null; // if not all processes in the sequence return null
         return sequence;
     }
