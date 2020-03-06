@@ -14,9 +14,14 @@ public class Main {
         try {
             Banker test = new Banker(avail,alloc,max);
             System.out.println(Arrays.toString(test.getSafeSequence()));
+            System.out.println(Arrays.toString(test.request(1,new int[]{1,0,2})));
+
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println(e.getMessage());
         }
+
+
+
     }
 }

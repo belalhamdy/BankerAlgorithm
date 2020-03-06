@@ -10,7 +10,6 @@ public class Banker {
     int[] available; //(available resources)
     int[][] maximum, allocation, need; //(maximum demand)/(allocated resources),(need) for each process
 
-    boolean[] finished;
     int[] sequence; // will carry a valid sequence
 
     int[] copyAvailable; //(available resources)
@@ -34,26 +33,21 @@ public class Banker {
     private void init() {
         nProcess = maximum.length;
         nResource = available.length;
-
-        finished = new boolean[nProcess];
-        sequence = new int[nProcess];
+        fillNeedArray();
     }
 
     private void makeCopy() {
-        copyAllocation = Arrays.copyOf(allocation, allocation.length);
-        copyAvailable = Arrays.copyOf(available, available.length);
-        copyMaximum = Arrays.copyOf(maximum, maximum.length);
-        copyFinished = Arrays.copyOf(finished, finished.length);
-        copySequence = Arrays.copyOf(sequence, sequence.length);
+        copyAllocation = Utilities.makeCopy(allocation);
+        copyMaximum = Utilities.makeCopy(maximum);
+        copySequence = Utilities.makeCopy(sequence);
+        copyAvailable = Utilities.makeCopy(available);
     }
 
     private void retrieveCopy() {
-        allocation = Arrays.copyOf(copyAllocation, copyAllocation.length);
-        ;
-        available = Arrays.copyOf(copyAvailable, copyAvailable.length);
-        maximum = Arrays.copyOf(copyMaximum, copyMaximum.length);
-        finished = Arrays.copyOf(copyFinished, copyFinished.length);
-        sequence = Arrays.copyOf(copySequence, copySequence.length);
+        allocation = Utilities.makeCopy(copyAllocation);
+        maximum = Utilities.makeCopy(copyMaximum);
+        sequence = Utilities.makeCopy(copySequence);
+        available = Utilities.makeCopy(copyAvailable);
     }
 
     private void checkArrays() throws Exception {
@@ -105,7 +99,8 @@ public class Banker {
 
 
     public int[] getSafeSequence() {
-        fillNeedArray();
+        boolean[] finished = new boolean[nProcess];
+        sequence = new int[nProcess];
 
         int c = 0, nFinished = 0;
         boolean flag = true;
@@ -179,7 +174,7 @@ public class Banker {
             }
 
             ret = getSafeSequence();
-            if (ret == null) retrieveCopy(); // retrieve the old state, if success save it
+            if (ret != null) retrieveCopy(); // retrieve the old state, if success save it
         }
 
         return ret;
