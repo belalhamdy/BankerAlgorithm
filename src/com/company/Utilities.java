@@ -18,4 +18,18 @@ public class Utilities {
         return array.clone();
     }
 
+    public static String get2DArrayAsString(String whatToPrint, int[][] arr){
+        StringBuilder sb = new StringBuilder();
+        sb.append(whatToPrint).append(": ");
+        for (int i = 0; i < arr.length; ++i) {
+            sb.append("Process ").append(i + 1).append(" ").append(whatToPrint);
+            for(int j = 0; j < arr[i].length; ++j){
+                sb.append(arr[i][j]);
+                sb.append(" ");
+            }
+        }
+        sb.append("\n");
+        return sb.toString();
+    }
+
 }

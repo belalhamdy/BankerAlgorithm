@@ -1,6 +1,5 @@
 package com.company;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class Banker {
@@ -19,18 +18,13 @@ public class Banker {
     private int[] copySequence; // will carry a valid sequence
 
 
-    Banker(int[] available, int[][] allocation, int[][] maximum) throws Exception {
+    Banker(int[] available, int[][] allocation, int[][] maximum) {
         this.available = available;
         this.allocation = allocation;
         this.maximum = maximum;
 
         ++bankerId;
 
-        checkArrays();
-        init();
-    }
-
-    private void init() {
         nProcess = maximum.length;
         nResource = available.length;
         fillNeedArray();
@@ -50,30 +44,6 @@ public class Banker {
         available = Utilities.makeCopy(copyAvailable);
     }
 
-    private void checkArrays() throws Exception {
-        if (available == null || allocation == null || maximum == null)
-            throw new Exception("Error: Array/s Cannot be null.");
-
-        if (this.available.length == 0 || this.allocation.length == 0)
-            throw new Exception("Error: Arrays cannot be empty.");
-        if (this.available.length != this.allocation[0].length)
-            throw new Exception("Error: Allocation array doesn't equal to other arrays.");
-
-        int alloc, max;
-        for (int i = 0; i < nProcess; ++i) {
-            for (int j = 0; j < nResource; ++j) {
-                // for out of index handling
-                try {
-                    alloc = this.allocation[i][j];
-                    max = this.maximum[i][j];
-
-                } catch (Exception e) {
-                    throw new Exception("Error: Arrays must be the same size.");
-                }
-                if (alloc < 0 || max < 0) throw new Exception("Error: Positive values only.");
-            }
-        }
-    }
 
     private void fillNeedArray() {
         need = new int[nProcess][nResource];
@@ -93,8 +63,19 @@ public class Banker {
     }
 
     private String arraysToString() {
-        // TODO: Convert the arrays to proper string display (need,allocation,maximum,available)
-        return "";
+        StringBuilder sb = new StringBuilder();
+        sb.append("Available Resources: ");
+        for (int i = 0; i < nResource; i++) {
+            sb.append(available[i]);
+            sb.append(" ");
+        }
+        sb.append("\n");
+
+        sb.append(Utilities.get2DArrayAsString("Allocations", allocation));
+        sb.append(Utilities.get2DArrayAsString("Allocations", allocation));
+        sb.append(Utilities.get2DArrayAsString("Allocations", allocation));
+
+        return sb.toString();
     }
 
 
