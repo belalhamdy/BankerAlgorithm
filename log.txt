@@ -65,7 +65,7 @@ Current Work Array: [10, 5, 7]
 Current Sequence: [1, 2, 0]
 ----------------------------
 Banker Simulation (1): Trying to handle a request for process 1 .
-Banker Simulation (1): Making backup for arrays.
+Banker Simulation (1): Making backups for arrays.
 Banker Simulation (1): Request for process 1 can be handled.
 Banker Simulation (1): Updating values for the new request. {old values}
 Current Available: [5, 4, 5]
@@ -192,4 +192,448 @@ Current Need: {
 Current Finished: [true, true, true]
 Current Work Array: [10, 5, 7]
 Current Sequence: [1, 2, 0]
+----------------------------
+Banker Simulation (2): Checking arrays are valid or not.
+Banker Simulation (2): Initializing Data.
+Banker Simulation (2): Filling need array.
+Banker Simulation (2): Trying to get a safe sequence for these values
+Current Available: [3, 3, 2]
+Current Maximum: {
+[7, 5, 3]
+[3, 2, 2]
+[9, 0, 2]
+[2, 2, 2]
+[4, 3, 3]
+}
+Current Allocation: {
+[0, 1, 0]
+[2, 0, 0]
+[3, 0, 2]
+[2, 1, 1]
+[0, 0, 2]
+}
+Current Need: {
+[7, 4, 3]
+[1, 2, 2]
+[6, 0, 0]
+[0, 1, 1]
+[4, 3, 1]
+}
+Current Finished: [false, false, false, false, false]
+Current Work Array: [3, 3, 2]
+Current Sequence: [0, 0, 0, 0, 0]
+----------------------------
+Banker Simulation (2): Trying to get a safe sequence for these values
+Current Available: [3, 3, 2]
+Current Maximum: {
+[7, 5, 3]
+[3, 2, 2]
+[9, 0, 2]
+[2, 2, 2]
+[4, 3, 3]
+}
+Current Allocation: {
+[0, 1, 0]
+[2, 0, 0]
+[3, 0, 2]
+[2, 1, 1]
+[0, 0, 2]
+}
+Current Need: {
+[7, 4, 3]
+[1, 2, 2]
+[6, 0, 0]
+[0, 1, 1]
+[4, 3, 1]
+}
+Current Finished: [false, true, false, true, true]
+Current Work Array: [7, 4, 5]
+Current Sequence: [1, 3, 4, 0, 0]
+----------------------------
+Banker Simulation (2): Found a safe sequence.
+Current Available: [3, 3, 2]
+Current Maximum: {
+[7, 5, 3]
+[3, 2, 2]
+[9, 0, 2]
+[2, 2, 2]
+[4, 3, 3]
+}
+Current Allocation: {
+[0, 1, 0]
+[2, 0, 0]
+[3, 0, 2]
+[2, 1, 1]
+[0, 0, 2]
+}
+Current Need: {
+[7, 4, 3]
+[1, 2, 2]
+[6, 0, 0]
+[0, 1, 1]
+[4, 3, 1]
+}
+Current Finished: [true, true, true, true, true]
+Current Work Array: [10, 5, 7]
+Current Sequence: [1, 3, 4, 0, 2]
+----------------------------
+Banker Simulation (2): Trying to handle a request for process 1 .
+Banker Simulation (2): Making backups for arrays.
+Banker Simulation (2): Request for process 1 can be handled.
+Banker Simulation (2): Updating values for the new request. {old values}
+Current Available: [3, 3, 2]
+Current Maximum: {
+[7, 5, 3]
+[3, 2, 2]
+[9, 0, 2]
+[2, 2, 2]
+[4, 3, 3]
+}
+Current Allocation: {
+[0, 1, 0]
+[2, 0, 0]
+[3, 0, 2]
+[2, 1, 1]
+[0, 0, 2]
+}
+Current Need: {
+[7, 4, 3]
+[1, 2, 2]
+[6, 0, 0]
+[0, 1, 1]
+[4, 3, 1]
+}
+Current Finished: [true, true, true, true, true]
+Current Work Array: [10, 5, 7]
+Current Sequence: [1, 3, 4, 0, 2]
+----------------------------
+Banker Simulation (2): Successfully updated values for the new request. {new values}
+Current Available: [2, 3, 0]
+Current Maximum: {
+[7, 5, 3]
+[3, 2, 2]
+[9, 0, 2]
+[2, 2, 2]
+[4, 3, 3]
+}
+Current Allocation: {
+[0, 1, 0]
+[3, 0, 2]
+[3, 0, 2]
+[2, 1, 1]
+[0, 0, 2]
+}
+Current Need: {
+[7, 4, 3]
+[0, 2, 0]
+[6, 0, 0]
+[0, 1, 1]
+[4, 3, 1]
+}
+Current Finished: [true, true, true, true, true]
+Current Work Array: [10, 5, 7]
+Current Sequence: [1, 3, 4, 0, 2]
+----------------------------
+Banker Simulation (2): Trying to get a safe sequence for these values
+Current Available: [2, 3, 0]
+Current Maximum: {
+[7, 5, 3]
+[3, 2, 2]
+[9, 0, 2]
+[2, 2, 2]
+[4, 3, 3]
+}
+Current Allocation: {
+[0, 1, 0]
+[3, 0, 2]
+[3, 0, 2]
+[2, 1, 1]
+[0, 0, 2]
+}
+Current Need: {
+[7, 4, 3]
+[0, 2, 0]
+[6, 0, 0]
+[0, 1, 1]
+[4, 3, 1]
+}
+Current Finished: [false, false, false, false, false]
+Current Work Array: [2, 3, 0]
+Current Sequence: [0, 0, 0, 0, 0]
+----------------------------
+Banker Simulation (2): Trying to get a safe sequence for these values
+Current Available: [2, 3, 0]
+Current Maximum: {
+[7, 5, 3]
+[3, 2, 2]
+[9, 0, 2]
+[2, 2, 2]
+[4, 3, 3]
+}
+Current Allocation: {
+[0, 1, 0]
+[3, 0, 2]
+[3, 0, 2]
+[2, 1, 1]
+[0, 0, 2]
+}
+Current Need: {
+[7, 4, 3]
+[0, 2, 0]
+[6, 0, 0]
+[0, 1, 1]
+[4, 3, 1]
+}
+Current Finished: [false, true, false, true, true]
+Current Work Array: [7, 4, 5]
+Current Sequence: [1, 3, 4, 0, 0]
+----------------------------
+Banker Simulation (2): Found a safe sequence.
+Current Available: [2, 3, 0]
+Current Maximum: {
+[7, 5, 3]
+[3, 2, 2]
+[9, 0, 2]
+[2, 2, 2]
+[4, 3, 3]
+}
+Current Allocation: {
+[0, 1, 0]
+[3, 0, 2]
+[3, 0, 2]
+[2, 1, 1]
+[0, 0, 2]
+}
+Current Need: {
+[7, 4, 3]
+[0, 2, 0]
+[6, 0, 0]
+[0, 1, 1]
+[4, 3, 1]
+}
+Current Finished: [true, true, true, true, true]
+Current Work Array: [10, 5, 7]
+Current Sequence: [1, 3, 4, 0, 2]
+----------------------------
+Banker Simulation (2): Request for 1 will be handled, saving the new values.
+Current Available: [2, 3, 0]
+Current Maximum: {
+[7, 5, 3]
+[3, 2, 2]
+[9, 0, 2]
+[2, 2, 2]
+[4, 3, 3]
+}
+Current Allocation: {
+[0, 1, 0]
+[3, 0, 2]
+[3, 0, 2]
+[2, 1, 1]
+[0, 0, 2]
+}
+Current Need: {
+[7, 4, 3]
+[0, 2, 0]
+[6, 0, 0]
+[0, 1, 1]
+[4, 3, 1]
+}
+Current Finished: [true, true, true, true, true]
+Current Work Array: [10, 5, 7]
+Current Sequence: [1, 3, 4, 0, 2]
+----------------------------
+Banker Simulation (2): Trying to handle a request for process 4 .
+Banker Simulation (2): Failed to handle the request for process 4 .
+Banker Simulation (2): Retrieving backups for arrays.
+Banker Simulation (2): Trying to handle a request for process 0 .
+Banker Simulation (2): Making backups for arrays.
+Banker Simulation (2): Request for process 0 can be handled.
+Banker Simulation (2): Updating values for the new request. {old values}
+Current Available: [3, 3, 2]
+Current Maximum: {
+[7, 5, 3]
+[3, 2, 2]
+[9, 0, 2]
+[2, 2, 2]
+[4, 3, 3]
+}
+Current Allocation: {
+[0, 1, 0]
+[2, 0, 0]
+[3, 0, 2]
+[2, 1, 1]
+[0, 0, 2]
+}
+Current Need: {
+[7, 4, 3]
+[0, 2, 0]
+[6, 0, 0]
+[0, 1, 1]
+[4, 3, 1]
+}
+Current Finished: [true, true, true, true, true]
+Current Work Array: [10, 5, 7]
+Current Sequence: [1, 3, 4, 0, 2]
+----------------------------
+Banker Simulation (2): Successfully updated values for the new request. {new values}
+Current Available: [3, 1, 2]
+Current Maximum: {
+[7, 5, 3]
+[3, 2, 2]
+[9, 0, 2]
+[2, 2, 2]
+[4, 3, 3]
+}
+Current Allocation: {
+[0, 3, 0]
+[2, 0, 0]
+[3, 0, 2]
+[2, 1, 1]
+[0, 0, 2]
+}
+Current Need: {
+[7, 2, 3]
+[0, 2, 0]
+[6, 0, 0]
+[0, 1, 1]
+[4, 3, 1]
+}
+Current Finished: [true, true, true, true, true]
+Current Work Array: [10, 5, 7]
+Current Sequence: [1, 3, 4, 0, 2]
+----------------------------
+Banker Simulation (2): Trying to get a safe sequence for these values
+Current Available: [3, 1, 2]
+Current Maximum: {
+[7, 5, 3]
+[3, 2, 2]
+[9, 0, 2]
+[2, 2, 2]
+[4, 3, 3]
+}
+Current Allocation: {
+[0, 3, 0]
+[2, 0, 0]
+[3, 0, 2]
+[2, 1, 1]
+[0, 0, 2]
+}
+Current Need: {
+[7, 2, 3]
+[0, 2, 0]
+[6, 0, 0]
+[0, 1, 1]
+[4, 3, 1]
+}
+Current Finished: [false, false, false, false, false]
+Current Work Array: [3, 1, 2]
+Current Sequence: [0, 0, 0, 0, 0]
+----------------------------
+Banker Simulation (2): Trying to get a safe sequence for these values
+Current Available: [3, 1, 2]
+Current Maximum: {
+[7, 5, 3]
+[3, 2, 2]
+[9, 0, 2]
+[2, 2, 2]
+[4, 3, 3]
+}
+Current Allocation: {
+[0, 3, 0]
+[2, 0, 0]
+[3, 0, 2]
+[2, 1, 1]
+[0, 0, 2]
+}
+Current Need: {
+[7, 2, 3]
+[0, 2, 0]
+[6, 0, 0]
+[0, 1, 1]
+[4, 3, 1]
+}
+Current Finished: [false, false, false, true, false]
+Current Work Array: [5, 2, 3]
+Current Sequence: [3, 0, 0, 0, 0]
+----------------------------
+Banker Simulation (2): Trying to get a safe sequence for these values
+Current Available: [3, 1, 2]
+Current Maximum: {
+[7, 5, 3]
+[3, 2, 2]
+[9, 0, 2]
+[2, 2, 2]
+[4, 3, 3]
+}
+Current Allocation: {
+[0, 3, 0]
+[2, 0, 0]
+[3, 0, 2]
+[2, 1, 1]
+[0, 0, 2]
+}
+Current Need: {
+[7, 2, 3]
+[0, 2, 0]
+[6, 0, 0]
+[0, 1, 1]
+[4, 3, 1]
+}
+Current Finished: [false, true, true, true, false]
+Current Work Array: [10, 2, 5]
+Current Sequence: [3, 1, 2, 0, 0]
+----------------------------
+Banker Simulation (2): Found a safe sequence.
+Current Available: [3, 1, 2]
+Current Maximum: {
+[7, 5, 3]
+[3, 2, 2]
+[9, 0, 2]
+[2, 2, 2]
+[4, 3, 3]
+}
+Current Allocation: {
+[0, 3, 0]
+[2, 0, 0]
+[3, 0, 2]
+[2, 1, 1]
+[0, 0, 2]
+}
+Current Need: {
+[7, 2, 3]
+[0, 2, 0]
+[6, 0, 0]
+[0, 1, 1]
+[4, 3, 1]
+}
+Current Finished: [true, true, true, true, true]
+Current Work Array: [10, 5, 7]
+Current Sequence: [3, 1, 2, 0, 4]
+----------------------------
+Banker Simulation (2): Request for 0 will be handled, saving the new values.
+Current Available: [3, 1, 2]
+Current Maximum: {
+[7, 5, 3]
+[3, 2, 2]
+[9, 0, 2]
+[2, 2, 2]
+[4, 3, 3]
+}
+Current Allocation: {
+[0, 3, 0]
+[2, 0, 0]
+[3, 0, 2]
+[2, 1, 1]
+[0, 0, 2]
+}
+Current Need: {
+[7, 2, 3]
+[0, 2, 0]
+[6, 0, 0]
+[0, 1, 1]
+[4, 3, 1]
+}
+Current Finished: [true, true, true, true, true]
+Current Work Array: [10, 5, 7]
+Current Sequence: [3, 1, 2, 0, 4]
 ----------------------------

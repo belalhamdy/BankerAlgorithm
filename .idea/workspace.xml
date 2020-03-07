@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0ae2d0dc-6e9d-4ed8-92d5-c325518742b0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +63,8 @@
       <option name="presentableId" value="Default" />
       <updated>1583209774215</updated>
       <workItem from="1583209777030" duration="9556000" />
-      <workItem from="1583526822319" duration="8674000" />
+      <workItem from="1583526822319" duration="9386000" />
+      <workItem from="1583582396009" duration="537000" />
     </task>
     <task id="LOCAL-00001" summary="Added Banker Algorithm and Logger Class but not tested yet.">
       <created>1583249606071</created>
@@ -196,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583579183302</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Added logging every step, WAITING FOR TESTER (DARDERY).">
+      <created>1583580639516</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1583580639516</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,50 +235,50 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="72" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1583249515576" />
-    <state x="393" y="8" key="CommitChangelistDialog2" timestamp="1583579181851">
+    <state x="393" y="8" key="CommitChangelistDialog2" timestamp="1583580638511">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="393" y="8" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1583579181851" />
+    <state x="393" y="8" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1583580638511" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1583527818458">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1583527818458" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1583579063132">
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom" timestamp="1583582876885">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583579063132" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1583579063132">
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583582876885" />
+    <state width="1493" height="261" key="GridCell.Tab.0.center" timestamp="1583582876885">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583579063132" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1583579063132">
+    <state width="1493" height="261" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583582876885" />
+    <state width="1493" height="261" key="GridCell.Tab.0.left" timestamp="1583582876885">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583579063132" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1583579063132">
+    <state width="1493" height="261" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583582876885" />
+    <state width="1493" height="261" key="GridCell.Tab.0.right" timestamp="1583582876885">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583579063132" />
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1583578922134">
+    <state width="1493" height="261" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583582876885" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1583582876886">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583578922134" />
-    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1583578922133">
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583582876886" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1583582876885">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1583578922133" />
-    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1583578922133">
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1583582876885" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1583582876885">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1583578922133" />
-    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1583578922133">
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1583582876885" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1583582876885">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1583578922133" />
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1583579184813">
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1583582876885" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1583580640639">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1583579184813" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1583580640639" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1583528038696">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -280,17 +290,7 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/Banker.java</url>
           <line>155</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/company/Banker.java</url>
-          <line>151</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/company/Logger.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="13" />
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
