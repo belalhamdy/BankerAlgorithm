@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0ae2d0dc-6e9d-4ed8-92d5-c325518742b0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Banker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Banker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Logger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Logger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Utilities.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +20,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1YbSPG1DBz5WCS0caFmhNZ2AKIx" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -62,7 +61,7 @@
       <option name="presentableId" value="Default" />
       <updated>1583209774215</updated>
       <workItem from="1583209777030" duration="9556000" />
-      <workItem from="1583526822319" duration="7810000" />
+      <workItem from="1583526822319" duration="8674000" />
     </task>
     <task id="LOCAL-00001" summary="Added Banker Algorithm and Logger Class but not tested yet.">
       <created>1583249606071</created>
@@ -190,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583532237498</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Added logging every step, WAITING FOR TESTER (DARDERY).">
+      <created>1583579183302</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1583579183302</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,20 +213,22 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Added Banker Algorithm and Logger Class but not tested yet." />
     <MESSAGE value="Added a testcase" />
     <MESSAGE value="fixed cloning issue" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed cloning issue" />
+    <MESSAGE value="Added logging every step, WAITING FOR TESTER (DARDERY)." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added logging every step, WAITING FOR TESTER (DARDERY)." />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="72" key="#Inspections" timestamp="1583249515576">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="72" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1583249515576" />
-    <state x="393" y="8" key="CommitChangelistDialog2" timestamp="1583532236368">
+    <state x="393" y="8" key="CommitChangelistDialog2" timestamp="1583579181851">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="393" y="8" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1583532236368" />
+    <state x="393" y="8" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1583579181851" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1583527818458">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -257,10 +265,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1583578922133" />
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1583532241400">
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1583579184813">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1583532241400" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1583579184813" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1583528038696">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
