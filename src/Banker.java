@@ -17,10 +17,11 @@ public class Banker {
     private int[] copySequence; // will carry a valid sequence
 
 
-    Banker(int[] available, int[][] allocation, int[][] maximum) throws Exception {
+    Banker(int[] available, int[][] allocation, int[][] maximum,int[][] need) throws Exception {
         this.available = available;
         this.allocation = allocation;
         this.maximum = maximum;
+        this.need = need;
 
         ++bankerId;
 
@@ -31,7 +32,6 @@ public class Banker {
         logMessage("Initializing Data.", false);
         nProcess = maximum.length;
         nResource = available.length;
-        fillNeedArray();
     }
 
     private void makeCopy() throws Exception {
@@ -50,17 +50,6 @@ public class Banker {
         available = Utilities.makeCopy(copyAvailable);
     }
 
-    private void fillNeedArray() throws Exception {
-        logMessage("Filling need array.", false);
-
-        need = new int[nProcess][nResource];
-
-        for (int i = 0; i < nProcess; ++i) {
-            for (int j = 0; j < nResource; ++j) {
-                need[i][j] = maximum[i][j] - allocation[i][j];
-            }
-        }
-    }
 
     private void logMessage(String message, boolean insertDataStructures) throws Exception {
         String identifierMessage = "Banker Simulation (" + bankerId + ")";

@@ -7,7 +7,7 @@ public class Main {
             InputHandler ih = new InputHandler(System.in, System.out);
             ih.fetchInputFromUser();
 
-            Banker test = new Banker(ih.getAvailable(), ih.getAllocation(), ih.getMaximum());
+            Banker test = new Banker(ih.getAvailable(), ih.getAllocation(), ih.getMaximum(),ih.getNeed());
             int[] safeSequence = test.getSafeSequence();
             System.out.println(Utilities.arrayToString(safeSequence,"Suggested Safe Sequence"));
             System.out.println("Enter RQ for a request, or EXIT to exit.");

@@ -47,6 +47,7 @@ public class InputHandler {
             }
         }
 
+
         for (int i = 0; i < nProcesses; ++i) {
             for (int j = 0; j < nResources; j++) {
                 need[i][j] = maximum[i][j] - allocation[i][j];
