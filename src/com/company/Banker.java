@@ -71,23 +71,6 @@ public class Banker {
             Logger.insertLog(logArrays() + "\n----------------------------"); // inserts the data structures to log
     }
 
-/*
-    private String arraysToString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Available Resources: ");
-        for (int i = 0; i < nResource; i++) {
-            sb.append(available[i]);
-            sb.append(" ");
-        }
-        sb.append("\n");
-
-        sb.append(Utilities.get2DArrayAsString("Allocations", allocation));
-        sb.append(Utilities.get2DArrayAsString("Maximum", maximum));
-        sb.append(Utilities.get2DArrayAsString("Allocation", allocation));
-        sb.append(Utilities.get2DArrayAsString("Need", need));
-
-        return sb.toString();
-*/
     private String logArrays() {
         return Utilities.arrayToString(available, "Current Available") + "\n" +
                 Utilities.arrayToString(maximum, "Current Maximum") + "\n" +
@@ -106,8 +89,8 @@ public class Banker {
         boolean flag = true;
 
         work = Arrays.copyOf(available, available.length);
+        logMessage("Trying to get a safe sequence for these values", true);
         while (nFinished < nProcess && flag) {
-            logMessage("Trying to get a safe sequence for these values", true);
             flag = false;
             for (int i = 0; i < nProcess; ++i) {
                 if (!finished[i]) {
@@ -115,6 +98,7 @@ public class Banker {
                     for (int j = 0; j <= nResource; ++j) {
 
                         if (j == nResource) { // satisfied all resources
+
                             sequence[c++] = i;
                             flag = true;
                           
@@ -125,6 +109,7 @@ public class Banker {
                             for (int k = 0; k < nResource; ++k) {
                                 work[k] += allocation[i][k];
                             }
+                            logMessage("Satisfied process #" + (i+1), true);
                         } else if (need[i][j] > work[j]) // cannot satisfy this resource
                             break;
                     }
@@ -134,7 +119,7 @@ public class Banker {
         if (nFinished != nProcess) {
             logMessage("Failed to find a safe sequence.", false);
             sequence = null; // if not all processes in the sequence return null
-        } else logMessage("Found a safe sequence.", true);
+        } else logMessage("Found a safe sequence!", false);
         return sequence;
     }
 
@@ -177,6 +162,7 @@ public class Banker {
                 }
                 available[i] -= currentRequest;
                 allocation[processId][i] += currentRequest;
+                maximum[processId][i] += currentRequest;
                 need[processId][i] -= currentRequest;
             }
             logMessage("Successfully updated values for the new request. {new values}", true);
