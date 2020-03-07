@@ -19,13 +19,13 @@ public class Banker {
     private int[] copySequence; // will carry a valid sequence
 
 
-    Banker(int[] available, int[][] allocation, int[][] maximum) throws Exception {
+    Banker(int[] available, int[][] allocation, int[][] maximum) {
         this.available = available;
         this.allocation = allocation;
         this.maximum = maximum;
 
         ++bankerId;
-        checkArrays();
+
         init();
     }
 
@@ -52,33 +52,6 @@ public class Banker {
         available = Utilities.makeCopy(copyAvailable);
     }
 
-    private void checkArrays() throws Exception {
-        logMessage("Checking arrays are valid or not.", false);
-
-        if (available == null || allocation == null || maximum == null)
-            throw new Exception("Error: Array/s Cannot be null.");
-
-        if (this.available.length == 0 || this.allocation.length == 0)
-            throw new Exception("Error: Arrays cannot be empty.");
-        if (this.available.length != this.allocation[0].length)
-            throw new Exception("Error: Allocation array doesn't equal to other arrays.");
-
-        int alloc, max;
-        for (int i = 0; i < nProcess; ++i) {
-            for (int j = 0; j < nResource; ++j) {
-                // for out of index handling
-                try {
-                    alloc = this.allocation[i][j];
-                    max = this.maximum[i][j];
-
-                } catch (Exception e) {
-                    throw new Exception("Error: Arrays must be the same size.");
-                }
-                if (alloc < 0 || max < 0) throw new Exception("Error: Positive values only.");
-            }
-        }
-    }
-
     private void fillNeedArray() throws Exception {
         logMessage("Filling need array.", false);
 
@@ -98,6 +71,23 @@ public class Banker {
             Logger.insertLog(logArrays() + "\n----------------------------"); // inserts the data structures to log
     }
 
+/*
+    private String arraysToString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Available Resources: ");
+        for (int i = 0; i < nResource; i++) {
+            sb.append(available[i]);
+            sb.append(" ");
+        }
+        sb.append("\n");
+
+        sb.append(Utilities.get2DArrayAsString("Allocations", allocation));
+        sb.append(Utilities.get2DArrayAsString("Maximum", maximum));
+        sb.append(Utilities.get2DArrayAsString("Allocation", allocation));
+        sb.append(Utilities.get2DArrayAsString("Need", need));
+
+        return sb.toString();
+*/
     private String logArrays() {
         return Utilities.arrayToString(available, "Current Available") + "\n" +
                 Utilities.arrayToString(maximum, "Current Maximum") + "\n" +
@@ -127,6 +117,7 @@ public class Banker {
                         if (j == nResource) { // satisfied all resources
                             sequence[c++] = i;
                             flag = true;
+                          
                             ++nFinished;
                             finished[i] = true;
 
