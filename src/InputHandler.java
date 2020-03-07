@@ -1,5 +1,3 @@
-package com.company;
-
 import java.io.InputStream;
 import java.io.PrintStream;
 import java.util.Scanner;
@@ -18,8 +16,8 @@ public class InputHandler {
         in = new Scanner(inStream);
 
     }
-    int nProcesses;
-    int nResources;
+    private int nProcesses = 0;
+    private int nResources = 0;
     public void fetchInputFromUser() throws Exception{
         out.println("Enter number of processes: ");
         nProcesses = in.nextInt();
@@ -74,16 +72,6 @@ public class InputHandler {
         return need;
     }
 
-    public void loadSampleInput1(){
-        maximum = new int[][]{{7, 5, 3}, {3, 2, 2}, {9, 0, 2}};
-        allocation = new int[][]{{0, 1, 0}, {2, 0, 0}, {3, 0, 2}};
-        available = new int[]{5, 4, 5};
-    }
-    public void loadSampleInput2(){
-        maximum = new int[][]{{7, 5, 3}, {3, 2, 2}, {9, 0, 2}, {2, 2, 2}, {4, 3, 3}};
-        allocation = new int[][]{{0, 1, 0}, {2, 0, 0}, {3, 0, 2}, {2, 1, 1}, {0, 0, 2}};
-        available = new int[]{3, 3, 2};
-    }
     private void checkArrays() throws Exception {
         if (available == null || allocation == null || maximum == null)
             throw new Exception("Error: Array/s Cannot be null.");
@@ -109,6 +97,21 @@ public class InputHandler {
                 if (needing < 0) throw  new Exception("Process allocation exceeds maximum allowed.");
             }
         }
+    }
+
+    int[] lastRequest;
+    int lastRequestIdx;
+    public boolean fetchRequest(){
+        String input = in.next();
+        if (input.toLowerCase().equals("rq")){
+            lastRequestIdx = in.nextInt();
+            lastRequest = new int[nResources];
+            for (int i = 0; i < nResources; i++) {
+                lastRequest[i] = in.nextInt();
+            }
+            return true;
+        }else
+        return false;
     }
 
 }
