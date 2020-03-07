@@ -19,7 +19,7 @@ public class Banker {
     private int[] copySequence; // will carry a valid sequence
 
 
-    Banker(int[] available, int[][] allocation, int[][] maximum) {
+    Banker(int[] available, int[][] allocation, int[][] maximum) throws Exception {
         this.available = available;
         this.allocation = allocation;
         this.maximum = maximum;

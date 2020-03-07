@@ -74,10 +74,15 @@ public class InputHandler {
         return need;
     }
 
-    public void loadSampleInput(){
+    public void loadSampleInput1(){
         maximum = new int[][]{{7, 5, 3}, {3, 2, 2}, {9, 0, 2}};
         allocation = new int[][]{{0, 1, 0}, {2, 0, 0}, {3, 0, 2}};
         available = new int[]{5, 4, 5};
+    }
+    public void loadSampleInput2(){
+        maximum = new int[][]{{7, 5, 3}, {3, 2, 2}, {9, 0, 2}, {2, 2, 2}, {4, 3, 3}};
+        allocation = new int[][]{{0, 1, 0}, {2, 0, 0}, {3, 0, 2}, {2, 1, 1}, {0, 0, 2}};
+        available = new int[]{3, 3, 2};
     }
     private void checkArrays() throws Exception {
         if (available == null || allocation == null || maximum == null)
